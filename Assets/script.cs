@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script : MonoBehaviour
+public class IdletoCrouch : MonoBehaviour
 {
     public Animator animator;
-    public float inx;
-    public float iny;
-
+    public float InputX;
+    public float InputY;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +17,9 @@ public class script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inx = Input.GetAxis("Horizontal");
-        iny = Input.GetAxis("Vertical");
-        animator.SetFloat("inx",inx);
-        animator.SetFloat("inY",iny);
+        InputX = Input.GetAxis("Vertical");
+        InputY = Input.GetAxis("Horizontal");
+        animator.SetFloat("InputX", InputX);
+        animator.SetFloat("InputY", InputY);
     }
 }
